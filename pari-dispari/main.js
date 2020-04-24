@@ -18,10 +18,10 @@ console.log(total);
 if (evenOdd == 'pari' && total % 2 == 0) {
     console.log('hai vinto');
 
-} else if (evenOdd = 'pari' && total % 2 != 0) {
+} else if (evenOdd == 'pari' && total % 2 != 0) {
     console.log('hai perso');
-} else if (evenOdd = 'dispari' && total % 2 != 0) {
+} else if (evenOdd == 'dispari' && total % 2 != 0) {
     console.log('hai vinto');
-} else if (evenOdd = 'dispari' && total % 2 == 0) {
+} else {
     console.log('hai perso');
 }
