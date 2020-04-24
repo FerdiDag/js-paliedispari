@@ -5,20 +5,23 @@ ispalin();
 
 function ispalin() {
     //chiedo all'utente una parola
-    var paroladivisa = prompt('Inserisci una parola');
-    console.log(paroladivisa);
+    var parola = prompt('Inserisci una parola');
+    parola = parola.toLowerCase();
+    console.log(parola);
     // prendo la parola inserita dall'utente e la inserisco splittata all'interno di un array(per poter utilizzare la funzione reverse sugli array), e la ritrasdormo in stringa
-    var paroladivisa = paroladivisa.split('');
-    var parolaUnita = paroladivisa.join('');
-    console.log(parolaUnita);
-    //utilizzo la funzione reverse per invertire l'ordine degli elemnti dell'array, e ristrasformo in stringa
-    var paroladivisa2 = paroladivisa.reverse();
-    var parolaUnita2 = paroladivisa2.join('');
-    console.log(parolaUnita2);
-    // confronto se le parole sono palindrome 
-    if (parolaUnita == parolaUnita2) {
+    var reverse = parola.split('').reverse().join('');
+
+    // confronto se le parole sono palindrome
+    if (parola == reverse) {
         alert('la parola è palindroma');
     } else {
         alert('la parola NON è palindroma');
     }
 }
+
+// var parolaUnita = paroladivisa.join('');
+// console.log(parolaUnita);
+// //utilizzo la funzione reverse per invertire l'ordine degli elemnti dell'array, e ristrasformo in stringa
+// var paroladivisa2 = paroladivisa.reverse();
+// var parolaUnita2 = paroladivisa2.join('');
+// console.log(parolaUnita2);
