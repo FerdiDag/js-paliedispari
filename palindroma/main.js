@@ -1,37 +1,18 @@
 //palindroma: scrivere una funzione per capire se una parola è palindroma. Quindi chiedere una parola all'utente, utilizzare la funzione per sapere se la parola inserita è palindroma e stampare un messaggio appropriato
 
 
-
-ispalin();
-
-function ispalin() {
-    //chiedo all'utente una parola
-    var parola = prompt('Inserisci una parola');
-    parola = parola.toLowerCase();
-    console.log(parola);
-    // prendo la parola inserita dall'utente e la inserisco splittata all'interno di un array(per poter utilizzare la funzione reverse sugli array), e la ritrasdormo in stringa
-    var reverse = parola.split('').reverse().join('');
-
-    // confronto se le parole sono palindrome
-    if (parola == reverse) {
-        alert('la parola è palindroma');
-    } else {
-        alert('la parola NON è palindroma');
-    }
-}
-
-
-// //chiedo all'utente una parola
-// var parola = prompt('Inserisci una parola');
+//
 // ispalin();
 //
 // function ispalin() {
+//     //chiedo all'utente una parola
+//     var parola = prompt('Inserisci una parola');
 //     parola = parola.toLowerCase();
 //     console.log(parola);
 //     // prendo la parola inserita dall'utente e la inserisco splittata all'interno di un array(per poter utilizzare la funzione reverse sugli array), e la ritrasdormo in stringa
 //     var reverse = parola.split('').reverse().join('');
 //
-//     //confronto se le parole sono palindrome
+//     // confronto se le parole sono palindrome
 //     if (parola == reverse) {
 //         alert('la parola è palindroma');
 //     } else {
@@ -39,6 +20,31 @@ function ispalin() {
 //     }
 // }
 //
+
+//chiedo all'utente una parola
+var parola = prompt('Inserisci una parola');
+console.log(parola);
+if (ispalin(parola)) {
+    alert('La parola è palindroma');
+} else {
+    alert('La parola NON è palindroma');
+}
+
+function ispalin() {
+    parola = parola.toLowerCase();
+    console.log(parola);
+    // prendo la parola inserita dall'utente e la inserisco splittata all'interno di un array(per poter utilizzare la funzione reverse sugli array), e la ritrasdormo in stringa
+    var reverse = parola.split('').reverse().join('');
+    console.log(reverse);
+
+    //confronto se le parole sono palindrome
+    if (parola == reverse) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 
 
